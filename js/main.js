@@ -14,10 +14,10 @@ var app = {
     },
 
     initialize: function() {
-		self.showAlert('Store Initialized', 'Info');
+		this.showAlert('Store Initialized', 'Info');
         this.store = new MemoryStore();
         $('.search-key').on('keyup', $.proxy(this.findByName, this));
-    }
+    },
 	
 	showAlert: function (message, title) {
 		if (navigator.notification) {
